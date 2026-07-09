@@ -110,71 +110,52 @@ body {
 }
 
 /* =========================================
-   SECCIÓN: SOBRE EL BLOG 
-========================================= */
-.about-section {
-    padding: 140px 5% 60px 5%; 
-    min-height: 80vh;
-    display: flex;
-    align-items: flex-start;
+   PÁGINA INTEGRANTES
+   ========================================= */
+.galeria { 
+    display: flex; 
+    justify-content: center; 
+    gap: 35px; 
+    flex-wrap: wrap; 
+    margin-top: 30px; 
 }
 
-.about-container {
-    width: 100%; 
-    max-width: 1600px; 
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row; 
-    gap: 40px;
-    align-items: stretch; 
+.tarjeta {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    padding: 25px 20px;
+    transition: transform 0.3s ease;
 }
 
-.about-box {
-    flex: 1; 
-    padding: 50px;
-    background-color: rgba(15, 20, 35, 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-    border-radius: 16px;
+.tarjeta:hover { 
+    transform: translateY(-10px); 
+    border-color: #FF9800; 
 }
 
-.about-box h2 {
-    font-size: 28px;
-    font-weight: 900;
-    color: #ffffff;
-    margin-bottom: 10px;
+.tarjeta img { 
+    width: 140px; 
+    height: 140px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid #FF9800; 
+    margin-bottom: 15px; 
 }
 
-.divider {
-    width: 60px;
-    height: 4px;
-    background-color: #ff2a85; 
-    border: none;
-    margin-bottom: 25px;
-    border-radius: 2px;
+.tarjeta h3 { 
+    font-size: 1.1rem; 
+    margin: 0 0 5px 0; 
+    border: none; 
+    color: white;
 }
 
-.about-box p {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    color: #cccccc;
+.tarjeta p { 
+    font-size: 0.9rem; 
+    margin: 0; 
+    color: #cbd5e1; 
 }
-
-.about-box strong, .about-box em {
-    color: #ffffff;
-}
-
-.sub-heading {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #ff2a85;
-}
-
 /* Estructura del contenido del Docente */
 .docente-content {
     display: flex;
