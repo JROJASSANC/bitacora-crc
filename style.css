@@ -101,6 +101,8 @@ body {
     margin: 0 auto;
 }
 
+
+
 /* Fondo ligeramente gris para intercalar secciones */
 .bg-light {
     background-color: #f9f9f9;
@@ -156,4 +158,43 @@ body {
 
 .btn-visit:hover {
     background-color: #d4d4d4;
+}
+
+/* --- DISEÑO RESPONSIVE (MÓVILES Y TABLETS) --- */
+@media (max-width: 768px) {
+    /* Ajusta la barra de navegación para que se apile */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        position: static; 
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Centra el menú desplegable en pantallas pequeñas */
+    .dropdown-content {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Apila la imagen y el texto uno debajo del otro */
+    .content-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center; 
+        gap: 30px;
+    }
+
+    .text-container h2 {
+        font-size: 24px;
+    }
+
+    .text-container h3 {
+        font-size: 20px;
+    }
 }
