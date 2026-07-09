@@ -1,97 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trabajo - Diseño Web</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo - Diseño Web</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-<div class="logo">
-<h1>MI WEB</h1> </div>
-<ul class="nav-links">
-            <li><a href="#inicio">FILMS</a></li>
-            <li><a href="#inicio">SOBRE EL BLOG</a></li>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>MI WEB</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#sobre-el-blog">SOBRE EL BLOG</a></li>
+            
+            <li class="dropdown">
+                <a href="#" class="dropbtn">TECHNOLOGY</a>
+                <div class="dropdown-content">
+                    <a href="#seccion1">Technology at Pixar</a>
+                    <a href="#seccion2">RenderMan</a>
+                    <a href="#seccion3">OpenUSD</a>
+                    <a href="#seccion4">Software R&D</a>
+                    <a href="#seccion5">Technology Libraries</a>
+                </div>
+            </li>
+            
+            <li><a href="#careers">CAREERS</a></li>
+            <li><a href="#more">MORE</a></li>
+        </ul>
+    </nav>
 
-<li class="dropdown">
-<a href="#" class="dropbtn">TECHNOLOGY</a>
-<div class="dropdown-content">
-<a href="#seccion1">Technology at Pixar</a>
-<a href="#seccion2">RenderMan</a>
-<a href="#seccion3">OpenUSD</a>
-<a href="#seccion4">Software R&D</a>
-<a href="#seccion5">Technology Libraries</a>
-</div>
-</li>
+    <main>
+        <section id="sobre-el-blog" class="about-section">
+            <div class="about-container">
+                
+                <div class="about-box">
+                    <h2>Sobre el blog</h2>
+                    <hr class="divider">
+                    <p>¡Bienvenidos a nuestro espacio digital de investigación!</p>
+                    <p>Esta bitácora académica ha sido desarrollada como portafolio virtual para el curso de <strong>Análisis de la Realidad Nacional y Ambiental</strong>, impartido en la Universidad Científica del Sur.</p>
+                    
+                    <h3 class="sub-heading">Nuestra Misión</h3>
+                    <p>El propósito principal de este espacio es analizar y comprender la realidad peruana tanto en el ámbito político, socioeconómico y ambiental a lo largo de la historia hasta el presente. A través de nuestros trabajos semanales, buscamos reflexionar sobre la identidad del país y sus desafíos estructurales, proponiendo estrategias para su desarrollo sostenible.</p>
+                    <p>Como futuros profesionales de la Universidad Científica del Sur, hacemos nuestro el lema institucional: <em>"Mejoras tú, mejora el mundo"</em>, comprometiéndonos a aplicar una perspectiva crítica y ciudadana frente a los problemas que afectan a nuestro entorno.</p>
+                </div>
 
-<li><a href="#careers">CAREERS</a></li>
-<li><a href="#more">MORE</a></li>
-</ul>
-</nav>
+                <div class="about-box">
+                    <h2>Conoce a nuestro docente</h2>
+                    <hr class="divider">
+                    <div class="docente-content">
+                        <div class="docente-img-container">
+                            <img src="imagen.jpg" alt="Juan Leandro Tito Melgar" class="docente-img">
+                        </div>
+                        <div class="docente-text">
+                            <h3>Juan Leandro Tito Melgar</h3>
+                            <h4>Magíster en Historia e Investigador</h4>
+                            <ul>
+                                <li>Magíster en Historia por la Universidad Nacional Mayor de San Marcos. Historiador por la misma universidad.</li>
+                                <li>Egresado de la carrera de Educación en la Universidad Antonio Ruiz de Montoya.</li>
+                                <li>Docente, investigador y archivero con experiencia en el sector público y privado.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-<main>
-<section id="seccion1" class="content-section">
-<div class="image-container">
-<img src="https://via.placeholder.com/500x350/111111/FFFFFF?text=Imagen+1" alt="Imagen 1">
-</div>
-<div class="text-container">
-<h2>TECHNOLOGY AT PIXAR</h2>
-<h3>El futuro de la animación</h3>
-<p>Aquí va tu texto descriptivo. Esta sección explica el contenido de la primera opción del menú desplegable. Al hacer clic arriba, la página bajará automáticamente hasta aquí.</p>
-<a href="#" class="btn-visit">VISIT PAGE</a>
-</div>
-</section>
+            </div>
+        </section>
 
-<section id="seccion2" class="content-section bg-light">
-<div class="image-container">
-<img src="https://via.placeholder.com/500x350/333333/FFFFFF?text=Imagen+2" alt="Imagen 2">
-</div>
-<div class="text-container">
-<h2>RENDERMAN</h2>
-<h3>The World's Most Versatile Renderer</h3>
-<p>RenderMan® is Pixar's Academy Award®-winning rendering technology, excelling at producing stunning imagery for VFX and feature film animation.</p>
-<a href="#" class="btn-visit">VISIT RENDERMAN.COM</a>
-</div>
-</section>
+        <section id="seccion1" class="content-section bg-light">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/500x350/111111/FFFFFF?text=Imagen+1" alt="Imagen 1">
+            </div>
+            <div class="text-container">
+                <h2>TECHNOLOGY AT PIXAR</h2>
+                <h3>El futuro de la animación</h3>
+                <p>Aquí va tu texto descriptivo. Esta sección explica el contenido de la primera opción del menú desplegable. Al hacer clic arriba, la página bajará automáticamente hasta aquí.</p>
+                <a href="#" class="btn-visit">VISIT PAGE</a>
+            </div>
+        </section>
 
-<section id="seccion3" class="content-section">
-<div class="image-container">
-<img src="https://via.placeholder.com/500x350/555555/FFFFFF?text=Imagen+3" alt="Imagen 3">
-</div>
-<div class="text-container">
-<h2>OPEN USD</h2>
-<h3>Descripción de la tercera sección</h3>
-<p>Aquí puedes agregar la información correspondiente a la tercera opción del menú. El diseño alterna para mantenerse visualmente atractivo.</p>
-<a href="#" class="btn-visit">LEARN MORE</a>
-</div>
-</section>
+        <section id="seccion2" class="content-section">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/500x350/333333/FFFFFF?text=Imagen+2" alt="Imagen 2">
+            </div>
+            <div class="text-container">
+                <h2>RENDERMAN</h2>
+                <h3>The World's Most Versatile Renderer</h3>
+                <p>RenderMan® is Pixar's Academy Award®-winning rendering technology, excelling at producing stunning imagery for VFX and feature film animation.</p>
+                <a href="#" class="btn-visit">VISIT RENDERMAN.COM</a>
+            </div>
+        </section>
 
-<section id="seccion4" class="content-section bg-light">
-<div class="image-container">
-<img src="https://via.placeholder.com/500x350/777777/FFFFFF?text=Imagen+4" alt="Imagen 4">
-</div>
-<div class="text-container">
-<h2>SOFTWARE R&D</h2>
-<h3>Investigación y Desarrollo</h3>
-<p>Más texto de ejemplo para la cuarta sección. Nota cómo cada sección tiene su propio ID que coincide con los enlaces del menú superior.</p>
-<a href="#" class="btn-visit">DISCOVER MORE</a>
-</div>
-</section>
+        <section id="seccion3" class="content-section bg-light">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/500x350/555555/FFFFFF?text=Imagen+3" alt="Imagen 3">
+            </div>
+            <div class="text-container">
+                <h2>OPEN USD</h2>
+                <h3>Descripción de la tercera sección</h3>
+                <p>Aquí puedes agregar la información correspondiente a la tercera opción del menú. El diseño alterna para mantenerse visualmente atractivo.</p>
+                <a href="#" class="btn-visit">LEARN MORE</a>
+            </div>
+        </section>
 
-<section id="seccion5" class="content-section">
-<div class="image-container">
-<img src="https://via.placeholder.com/500x350/999999/FFFFFF?text=Imagen+5" alt="Imagen 5">
-</div>
-<div class="text-container">
-<h2>TECHNOLOGY LIBRARIES</h2>
-<h3>Recursos de código abierto</h3>
-<p>Esta es la última sección de tu trabajo. Si necesitas añadir una sexta, solo debes copiar y pegar esta estructura `<section>` y cambiar su ID.</p>
-<a href="#" class="btn-visit">VIEW GITHUB</a>
-</div>
-</section>
-</main>
+        <section id="seccion4" class="content-section">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/500x350/777777/FFFFFF?text=Imagen+4" alt="Imagen 4">
+            </div>
+            <div class="text-container">
+                <h2>SOFTWARE R&D</h2>
+                <h3>Investigación y Desarrollo</h3>
+                <p>Más texto de ejemplo para la cuarta sección. Nota cómo cada sección tiene su propio ID que coincide con los enlaces del menú superior.</p>
+                <a href="#" class="btn-visit">DISCOVER MORE</a>
+            </div>
+        </section>
+
+        <section id="seccion5" class="content-section bg-light">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/500x350/999999/FFFFFF?text=Imagen+5" alt="Imagen 5">
+            </div>
+            <div class="text-container">
+                <h2>TECHNOLOGY LIBRARIES</h2>
+                <h3>Recursos de código abierto</h3>
+                <p>Esta es la última sección de tu trabajo. Si necesitas añadir una sexta, solo debes copiar y pegar esta estructura y cambiar su ID.</p>
+                <a href="#" class="btn-visit">VIEW GITHUB</a>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
