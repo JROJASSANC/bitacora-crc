@@ -1,380 +1,43 @@
-/* RESETEO BÁSICO */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+body { background-image: url('fondo.png'); background-size: cover; background-attachment: fixed; color: #e0e0e0; }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 120px; 
-}
+.navbar { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 95%; max-width: 1400px; background-color: #0a0f18; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.05); }
 
-/* FONDOS Y TEXTO GENERAL */
-body {
-    background-image: url('fondo.png'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-color: #050914; 
-    color: #e0e0e0;
-}
+.logo h1 { font-family: 'Montserrat', sans-serif; font-size: 17px; color: #e83283; font-weight: 800; }
+.nav-links { list-style: none; display: flex; gap: 40px; }
+.nav-links a { text-decoration: none; color: #ffffff !important; font-weight: 600; font-size: 13px; letter-spacing: 2px; }
+.nav-links a:hover { color: #ff2a85 !important; }
 
-/* --- BARRA DE NAVEGACIÓN FLOTANTE TIPO PÍLDORA --- */
-.navbar {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    max-width: 1400px;
-    background-color: #0a0f18; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    z-index: 1000;
-    border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* --- ESTILOS DEL LOGO --- */
-.logo h1 {
-    font-family: 'Montserrat', sans-serif; /* Nueva tipografía importada */
-    font-size: 17px; 
-    color: #e83283; /* Tono rosa ajustado para igualar tu imagen */
-    font-weight: 800; /* Extra negrita para ese aspecto grueso */
-    margin: 0;
-    letter-spacing: -0.5px; /* Letras un poquito más juntas como en el ejemplo */
-}
-
-/* --- ENLACES Y MENÚ --- */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-}
-
-.nav-links li {
-    position: relative; 
-}
-
-.nav-links a, .dropbtn {
-    text-decoration: none;
-    color: #ffffff !important; 
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 2px;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover, .dropbtn:hover {
-    color: #ff2a85 !important;
-}
-
-/* --- MENÚ DESPLEGABLE (DROPDOWN) --- */
-.dropdown-content {
-    display: none; 
-    position: absolute;
-    top: 100%; 
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #0a0f18; 
-    min-width: 220px;
-    border-radius: 12px;
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    z-index: 1;
-    overflow: hidden;
-}
-
-.dropdown-content a {
-    color: #ffffff !important;
-    padding: 15px 20px;
-    text-decoration: none;
-    display: block;
-    font-size: 12px;
-    text-align: center;
-}
-
-.dropdown-content a:hover {
-    background-color: rgba(255, 42, 133, 0.1); 
-    color: #ff2a85 !important;
-}
-
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-    display: block;
-}
-
-/* =========================================
-   SECCIÓN: SOBRE EL BLOG 
-========================================= */
-.about-section {
-    padding: 140px 5% 60px 5%; 
-    min-height: 80vh;
-    display: flex;
-    align-items: flex-start;
-}
-
-.about-container {
+.about-section { padding: 120px 5% 40px 5%; }
+.about-box { 
     width: 100%; 
-    max-width: 1600px; 
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row; 
-    gap: 40px;
-    align-items: stretch; 
+    background-color: rgba(15, 20, 35, 0.6) !important; 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; 
+    padding: 50px; 
+    border-radius: 16px; 
+    margin-bottom: 30px; 
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
 
-.about-box {
-    flex: 1; 
-    padding: 50px;
-    background-color: rgba(15, 20, 35, 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-    border-radius: 16px;
-}
+.divider { width: 60px; height: 4px; background-color: #ff2a85; border: none; margin-bottom: 25px; }
 
-.about-box h2 {
-    font-size: 28px;
-    font-weight: 900;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 30px; }
+.team-member { text-align: center; background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; }
+.team-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #ff2a85; object-fit: cover; margin-bottom: 15px; }
 
-.divider {
-    width: 60px;
-    height: 4px;
-    background-color: #ff2a85; 
-    border: none;
-    margin-bottom: 25px;
-    border-radius: 2px;
-}
+.docente-content { display: flex; align-items: center; gap: 30px; }
+.docente-img { width: 160px; height: 160px; border-radius: 50%; border: 3px solid #ff2a85; object-fit: cover; }
 
-.about-box p {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    color: #cccccc;
-}
+.content-section { display: flex; padding: 50px 5%; gap: 60px; background-color: rgba(15, 20, 35, 0.5); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; margin: 0 auto 40px auto; width: 90%; max-width: 1600px; }
+.zoomable-img { width: 100%; cursor: pointer; transition: 0.3s; }
 
-.about-box strong, .about-box em {
-    color: #ffffff;
-}
+.modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); }
+.modal:target { display: flex; justify-content: center; align-items: center; }
+.close-modal { position: absolute; top: 30px; right: 40px; color: #fff; font-size: 50px; text-decoration: none; }
 
-.sub-heading {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #ff2a85;
-}
-
-/* Estructura del contenido del Docente */
-.docente-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.docente-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ff2a85; 
-}
-
-.docente-text h3 {
-    font-size: 22px;
-    margin-bottom: 5px;
-    color: #ffffff;
-}
-
-.docente-text h4 {
-    font-size: 15px;
-    font-weight: bold;
-    color: #ff2a85;
-    margin-bottom: 20px;
-}
-
-.docente-text ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    color: #cccccc;
-    text-align: left; 
-}
-
-.docente-text ul li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-/* =========================================
-   SECCIONES DE INFOGRAFÍAS
-========================================= */
-.content-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 5%; 
-    gap: 60px;
-    width: 90%;
-    max-width: 1600px;
-    margin: 0 auto 60px auto;
-    background-color: rgba(15, 20, 35, 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-    border-radius: 16px;
-}
-
-.image-container {
-    flex: 2.5; 
-    display: flex;
-    justify-content: center;
-}
-
-.text-container {
-    flex: 1; 
-    padding: 20px 0;
-}
-
-.zoomable-img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: contain;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.zoomable-img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 15px 35px rgba(255, 42, 133, 0.3);
-}
-
-.text-container h2 {
-    font-size: 32px;
-    font-weight: 900;
-    margin-bottom: 15px;
-    color: #ffffff;
-    line-height: 1.2;
-}
-
-.text-container h3 {
-    font-size: 18px;
-    font-weight: 400;
-    color: #cccccc;
-    line-height: 1.5;
-}
-
-/* =========================================
-   MODAL (VENTANA EMERGENTE)
-========================================= */
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 2000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.92);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-.modal:target {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content-wrapper {
-    position: relative;
-    max-width: 90%;
-    max-height: 90vh;
-}
-
-.modal-img {
-    max-width: 100%;
-    max-height: 90vh;
-    border-radius: 4px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-    animation: zoomIn 0.3s ease;
-}
-
-.close-modal {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    color: #ffffff;
-    font-size: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    z-index: 2001;
-}
-
-.close-modal:hover {
-    color: #ff2a85;
-}
-
-@keyframes zoomIn {
-    from {transform: scale(0.9); opacity: 0;}
-    to {transform: scale(1); opacity: 1;}
-}
-
-/* --- DISEÑO RESPONSIVE (MÓVILES Y TABLETS) --- */
 @media (max-width: 1024px) {
-    .navbar {
-        flex-direction: column;
-        padding: 20px;
-        gap: 20px;
-        position: relative; 
-        top: 0;
-        width: 100%;
-        border-radius: 0;
-    }
-
-    .logo h1 {
-        font-size: 15px; 
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .dropdown-content {
-        top: 100%;
-    }
-    
-    .about-container {
-        flex-direction: column;
-    }
-
-    .content-section {
-        flex-direction: column;
-        padding: 40px 20px;
-        text-align: center; 
-        gap: 20px;
-    }
-    
-    .text-container {
-        padding: 0;
-    }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .content-section { flex-direction: column; }
 }
