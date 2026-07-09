@@ -19,11 +19,9 @@
             <li class="dropdown">
                 <a href="#" class="dropbtn">TECHNOLOGY</a>
                 <div class="dropdown-content">
-                    <a href="#seccion1">Technology at Pixar</a>
-                    <a href="#seccion2">RenderMan</a>
-                    <a href="#seccion3">OpenUSD</a>
-                    <a href="#seccion4">Software R&D</a>
-                    <a href="#seccion5">Technology Libraries</a>
+                    <a href="#seccion1">Infografía 1</a>
+                    <a href="#seccion2">Infografía 2</a>
+                    <a href="#seccion3">Infografía 3</a>
                 </div>
             </li>
             
@@ -72,42 +70,72 @@
             </div>
         </section>
 
-        <!-- SECCIONES DE CONTENIDO -->
+        <!-- SECCIONES DE INFOGRAFÍAS -->
+        
+        <!-- INFOGRAFÍA 1 -->
         <section id="seccion1" class="content-section">
             <div class="image-container">
-                <img src="https://via.placeholder.com/500x350/111111/FFFFFF?text=Imagen+1" alt="Imagen 1">
+                <!-- El enlace apunta al ID del modal para abrirlo -->
+                <a href="#modal1">
+                    <img src="https://via.placeholder.com/800x600/111111/FFFFFF?text=Infografia+1" alt="Infografía 1" class="zoomable-img">
+                </a>
             </div>
             <div class="text-container">
-                <h2>TECHNOLOGY AT PIXAR</h2>
-                <h3>El futuro de la animación</h3>
-                <p>Aquí va tu texto descriptivo. Esta sección explica el contenido de la primera opción del menú desplegable. Al hacer clic arriba, la página bajará automáticamente hasta aquí.</p>
-                <a href="#" class="btn-visit">VISIT PAGE</a>
+                <h2>TÍTULO DE LA INFOGRAFÍA 1</h2>
+                <h3>Breve descripción de dos líneas sobre el tema analizado en esta sección.</h3>
             </div>
         </section>
 
+        <!-- MODAL INFOGRAFÍA 1 -->
+        <div id="modal1" class="modal">
+            <!-- El botón de cerrar apunta de vuelta a la sección para no perder el scroll -->
+            <a href="#seccion1" class="close-modal">&times;</a>
+            <div class="modal-content-wrapper">
+                <img src="https://via.placeholder.com/800x600/111111/FFFFFF?text=Infografia+1" class="modal-img" alt="Infografía 1">
+            </div>
+        </div>
+
+        <!-- INFOGRAFÍA 2 -->
         <section id="seccion2" class="content-section">
             <div class="image-container">
-                <img src="https://via.placeholder.com/500x350/333333/FFFFFF?text=Imagen+2" alt="Imagen 2">
+                <a href="#modal2">
+                    <img src="https://via.placeholder.com/800x600/333333/FFFFFF?text=Infografia+2" alt="Infografía 2" class="zoomable-img">
+                </a>
             </div>
             <div class="text-container">
-                <h2>RENDERMAN</h2>
-                <h3>The World's Most Versatile Renderer</h3>
-                <p>RenderMan® is Pixar's Academy Award®-winning rendering technology, excelling at producing stunning imagery for VFX and feature film animation.</p>
-                <a href="#" class="btn-visit">VISIT RENDERMAN.COM</a>
+                <h2>TÍTULO DE LA INFOGRAFÍA 2</h2>
+                <h3>Segunda descripción de dos líneas enfocada en los datos más relevantes.</h3>
             </div>
         </section>
 
+        <!-- MODAL INFOGRAFÍA 2 -->
+        <div id="modal2" class="modal">
+            <a href="#seccion2" class="close-modal">&times;</a>
+            <div class="modal-content-wrapper">
+                <img src="https://via.placeholder.com/800x600/333333/FFFFFF?text=Infografia+2" class="modal-img" alt="Infografía 2">
+            </div>
+        </div>
+
+        <!-- INFOGRAFÍA 3 -->
         <section id="seccion3" class="content-section">
             <div class="image-container">
-                <img src="https://via.placeholder.com/500x350/555555/FFFFFF?text=Imagen+3" alt="Imagen 3">
+                <a href="#modal3">
+                    <img src="https://via.placeholder.com/800x600/555555/FFFFFF?text=Infografia+3" alt="Infografía 3" class="zoomable-img">
+                </a>
             </div>
             <div class="text-container">
-                <h2>OPEN USD</h2>
-                <h3>Descripción de la tercera sección</h3>
-                <p>Aquí puedes agregar la información correspondiente a la tercera opción del menú. El diseño alterna para mantenerse visualmente atractivo.</p>
-                <a href="#" class="btn-visit">LEARN MORE</a>
+                <h2>TÍTULO DE LA INFOGRAFÍA 3</h2>
+                <h3>Tercera descripción de dos líneas resumiendo el contenido expuesto.</h3>
             </div>
         </section>
+
+        <!-- MODAL INFOGRAFÍA 3 -->
+        <div id="modal3" class="modal">
+            <a href="#seccion3" class="close-modal">&times;</a>
+            <div class="modal-content-wrapper">
+                <img src="https://via.placeholder.com/800x600/555555/FFFFFF?text=Infografia+3" class="modal-img" alt="Infografía 3">
+            </div>
+        </div>
 
     </main>
 
