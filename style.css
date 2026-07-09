@@ -1,4 +1,4 @@
-/* RESETEO BÁSICO */
+/* --- RESETEO BÁSICO --- */
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +6,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Habilita el scroll suave al hacer clic en los enlaces (¡El secreto para no usar JavaScript!) */
 html {
     scroll-behavior: smooth;
-    /* Evita que el menú fijo tape los títulos de las secciones al hacer scroll */
     scroll-padding-top: 100px; 
 }
 
@@ -23,7 +21,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #161b22; /* El nuevo color oscuro */
+    background-color: #161b22; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,11 +30,13 @@ body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-.logo h1, .nav-links a {
+.logo h1, .nav-links a, .dropbtn {
+    color: #ffffff !important; 
+    text-decoration: none;
     font-family: serif;
     letter-spacing: 4px;
-    font-size: 28px;
-    color: #ffffff; /* Texto en blanco para que se vea sobre el fondo oscuro */
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .nav-links {
@@ -46,22 +46,14 @@ body {
 }
 
 .nav-links li {
-    position: relative; /* Necesario para ubicar el menú desplegable */
+    position: relative;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 2px;
-}
-
-/* --- MENÚ DESPLEGABLE (DROPDOWN) --- */
+/* --- MENÚ DESPLEGABLE --- */
 .dropdown-content {
     display: none; 
     position: absolute;
-    top: 100%; /* ¡La solución! Al estar al 100%, se pega exactamente debajo del botón sin dejar huecos */
+    top: 100%;
     left: -20px;
     background-color: #161b22; 
     min-width: 250px;
@@ -69,139 +61,49 @@ body {
     z-index: 1;
 }
 
-/* --- BARRA DE NAVEGACIÓN Y MENÚS --- */
-.logo h1, .nav-links a, .dropbtn {
-    color: #ffffff !important; 
-}
-
-/* Color para el texto dentro del menú desplegable */
 .dropdown-content a {
     color: #ffffff !important;
-    background-color: #161b22; /* Fondo del desplegable igual al de la barra */
     padding: 15px 20px;
-    text-decoration: none;
     display: block;
     font-size: 13px;
     letter-spacing: 2px;
 }
 
-/* Efecto al pasar el mouse por las opciones del desplegable */
 .dropdown-content a:hover {
-    background-color: #2b333e; /* Un tono un poco más claro para el hover */
+    background-color: #2b333e;
 }
 
-/* Muestra el menú al pasar el mouse (hover) O al hacer clic (focus-within) */
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
     display: block;
 }
 
-/* --- SECCIONES DE CONTENIDO (FOTO 3) --- */
+/* --- SECCIONES DE CONTENIDO --- */
 .content-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 80vh; /* Ocupa buena parte de la pantalla */
-    padding: 60px;
+    min-height: 80vh;
+    padding: 100px 60px 60px 60px; /* Padding superior extra para no chocar con la navbar */
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.bg-light { background-color: #f9f9f9; }
 
+.image-container { flex: 1; }
+.image-container img { width: 100%; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-/* Fondo ligeramente gris para intercalar secciones */
-.bg-light {
-    background-color: #f9f9f9;
-}
+.text-container { flex: 1; padding: 20px; }
+.text-container h2 { font-size: 28px; font-weight: 900; margin-bottom: 10px; }
+.text-container h3 { font-size: 24px; font-weight: 300; margin-bottom: 20px; color: #444; }
+.text-container p { font-size: 16px; line-height: 1.6; margin-bottom: 30px; color: #555; }
 
-.image-container {
-    flex: 1;
-}
-
-.image-container img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.text-container {
-    flex: 1;
-    padding: 20px;
-}
-
-.text-container h2 {
-    font-size: 28px;
-    font-weight: 900;
-    margin-bottom: 10px;
-}
-
-.text-container h3 {
-    font-size: 24px;
-    font-weight: 300;
-    margin-bottom: 20px;
-    color: #444;
-}
-
-.text-container p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #555;
-}
-
-.btn-visit {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #e5e5e5;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 12px;
-    letter-spacing: 1px;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-}
-
-.btn-visit:hover {
-    background-color: #d4d4d4;
-}
-
-/* --- DISEÑO RESPONSIVE (MÓVILES Y TABLETS) --- */
+/* --- DISEÑO RESPONSIVE --- */
 @media (max-width: 768px) {
-    /* Ajusta la barra de navegación para que se apile */
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-        gap: 15px;
-        position: static; 
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    /* Centra el menú desplegable en pantallas pequeñas */
-    .dropdown-content {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    /* Apila la imagen y el texto uno debajo del otro */
-    .content-section {
-        flex-direction: column;
-        padding: 40px 20px;
-        text-align: center; 
-        gap: 30px;
-    }
-
-    .text-container h2 {
-        font-size: 24px;
-    }
-
-    .text-container h3 {
-        font-size: 20px;
-    }
+    .navbar { flex-direction: column; padding: 15px; gap: 15px; position: static; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .dropdown-content { left: 50%; transform: translateX(-50%); }
+    .content-section { flex-direction: column; padding: 40px 20px; text-align: center; gap: 30px; }
 }
