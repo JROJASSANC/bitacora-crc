@@ -30,13 +30,23 @@ body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-.logo h1, .nav-links a, .dropbtn {
-    font-family: serif;
-    letter-spacing: 4px;
-    font-size: 28px;
-    color: #ffffff !important; 
+/* --- ESTILOS DEL LOGO --- */
+.logo h1 {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 20px;
+    letter-spacing: 0px;
+    margin: 0;
 }
 
+.logo-white {
+    color: #ffffff;
+}
+
+.logo-accent {
+    color: #00B4D8; /* Color celeste académico */
+}
+
+/* --- ENLACES Y MENÚ --- */
 .nav-links {
     list-style: none;
     display: flex;
@@ -50,6 +60,7 @@ body {
 .nav-links a, .dropbtn {
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff !important; 
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 2px;
@@ -88,28 +99,28 @@ body {
 }
 
 /* =========================================
-   SECCIÓN: SOBRE EL BLOG (AJUSTADA AL ANCHO)
+   SECCIÓN: SOBRE EL BLOG 
 ========================================= */
 .about-section {
-    padding: 140px 5% 60px 5%; /* Usa porcentajes para adaptarse mejor a cualquier pantalla */
+    padding: 140px 5% 60px 5%; 
     min-height: 80vh;
     display: flex;
     align-items: flex-start;
 }
 
 .about-container {
-    width: 100%; /* Fuerza a usar todo el espacio disponible */
-    max-width: 1600px; /* Permite que se expanda mucho más a los lados */
+    width: 100%; 
+    max-width: 1600px; 
     margin: 0 auto;
     display: flex;
-    flex-direction: row; /* Uno al lado del otro */
+    flex-direction: row; 
     gap: 40px;
     align-items: stretch; 
 }
 
 /* Estilo de los recuadros */
 .about-box {
-    flex: 1; /* Hace que ambos recuadros midan exactamente el 50% del ancho */
+    flex: 1; 
     background-color: #f9f9f9; 
     padding: 50px;
     border-radius: 8px;
@@ -198,7 +209,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 80vh; 
-    padding: 60px 5%; /* Ajustado para que combine con el ancho nuevo */
+    padding: 60px 5%; 
     gap: 50px;
     width: 100%;
     max-width: 1600px;
@@ -270,6 +281,11 @@ body {
         position: static; 
     }
 
+    .logo h1 {
+        font-size: 16px; /* Ajuste para que el texto largo no rompa el diseño móvil */
+        text-align: center;
+    }
+
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
@@ -281,7 +297,6 @@ body {
         transform: translateX(-50%);
     }
     
-    /* Vuelve a apilar los recuadros en pantallas pequeñas para que no se aplasten */
     .about-container {
         flex-direction: column;
     }
