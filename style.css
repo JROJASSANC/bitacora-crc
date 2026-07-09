@@ -8,42 +8,45 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; 
+    scroll-padding-top: 120px; 
 }
 
+/* FONDOS Y TEXTO GENERAL */
 body {
-    background-color: #ffffff;
-    color: #333;
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #050914; /* Color de respaldo */
+    color: #e0e0e0;
 }
 
-/* --- BARRA DE NAVEGACIÓN --- */
+/* --- BARRA DE NAVEGACIÓN FLOTANTE TIPO PÍLDORA --- */
 .navbar {
     position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #161b22; 
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1400px;
+    background-color: #0a0f18; /* Azul muy oscuro casi negro */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 60px;
+    padding: 15px 40px;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* --- ESTILOS DEL LOGO --- */
 .logo h1 {
-    font-family: 'Arial Black', Impact, sans-serif;
-    font-size: 20px;
-    letter-spacing: 0px;
+    font-size: 18px;
+    color: #ff2a85; /* Rosa/Fucsia neón */
+    font-weight: 700;
     margin: 0;
-}
-
-.logo-white {
-    color: #ffffff;
-}
-
-.logo-accent {
-    color: #00B4D8; /* Color celeste académico */
+    letter-spacing: 1px;
 }
 
 /* --- ENLACES Y MENÚ --- */
@@ -59,43 +62,63 @@ body {
 
 .nav-links a, .dropbtn {
     text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff !important; 
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover color fucsia */
+.nav-links a:hover, .dropbtn:hover {
+    color: #ff2a85 !important;
 }
 
 /* --- MENÚ DESPLEGABLE (DROPDOWN) --- */
 .dropdown-content {
     display: none; 
     position: absolute;
-    top: 100%; 
-    left: -20px;
-    background-color: #161b22; 
-    min-width: 250px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    top: 250%; /* Separado de la barra píldora */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0a0f18; 
+    min-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     z-index: 1;
+    overflow: hidden;
 }
 
 .dropdown-content a {
     color: #ffffff !important;
-    background-color: #161b22; 
     padding: 15px 20px;
     text-decoration: none;
     display: block;
-    font-size: 13px;
-    letter-spacing: 2px;
-    transition: background 0.3s ease;
+    font-size: 12px;
+    text-align: center;
 }
 
 .dropdown-content a:hover {
-    background-color: #2b333e; 
+    background-color: rgba(255, 42, 133, 0.1); 
+    color: #ff2a85 !important;
 }
 
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
     display: block;
+}
+
+/* =========================================
+   EFECTO GLASSMORPHISM PARA CONTENEDORES
+========================================= */
+.glass-panel {
+    background-color: rgba(15, 20, 35, 0.5); /* Semitransparente oscuro */
+    backdrop-filter: blur(12px); /* Efecto vidrio desenfocado */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
 }
 
 /* =========================================
@@ -118,36 +141,42 @@ body {
     align-items: stretch; 
 }
 
-/* Estilo de los recuadros */
 .about-box {
     flex: 1; 
-    background-color: #f9f9f9; 
     padding: 50px;
-    border-radius: 8px;
-    border: 1px solid #eaeaea;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    background-color: rgba(15, 20, 35, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
 }
 
 .about-box h2 {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 900;
-    color: #222;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
 .divider {
     width: 60px;
     height: 4px;
-    background-color: #555;
+    background-color: #ff2a85; /* Línea fucsia */
     border: none;
     margin-bottom: 25px;
+    border-radius: 2px;
 }
 
 .about-box p {
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 15px;
-    color: #444;
+    color: #cccccc;
+}
+
+.about-box strong, .about-box em {
+    color: #ffffff;
 }
 
 .sub-heading {
@@ -155,7 +184,7 @@ body {
     font-weight: 700;
     margin-top: 30px;
     margin-bottom: 15px;
-    color: #333;
+    color: #ff2a85;
 }
 
 /* Estructura del contenido del Docente */
@@ -173,26 +202,26 @@ body {
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ddd; 
+    border: 3px solid #ff2a85; /* Borde fucsia para resaltar */
 }
 
 .docente-text h3 {
     font-size: 22px;
     margin-bottom: 5px;
-    color: #222;
+    color: #ffffff;
 }
 
 .docente-text h4 {
     font-size: 15px;
     font-weight: bold;
-    color: #666;
+    color: #ff2a85;
     margin-bottom: 20px;
 }
 
 .docente-text ul {
     list-style-type: disc;
     margin-left: 20px;
-    color: #444;
+    color: #cccccc;
     text-align: left; 
 }
 
@@ -202,22 +231,24 @@ body {
 }
 
 /* =========================================
-   SECCIONES DE CONTENIDO ANTIGUAS 
+   SECCIONES DE CONTENIDO 
 ========================================= */
 .content-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 80vh; 
     padding: 60px 5%; 
     gap: 50px;
-    width: 100%;
+    width: 90%;
     max-width: 1600px;
-    margin: 0 auto;
-}
-
-.bg-light {
-    background-color: #f9f9f9;
+    margin: 0 auto 60px auto;
+    /* Efecto vidrio también para estas secciones */
+    background-color: rgba(15, 20, 35, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
 }
 
 .image-container {
@@ -227,7 +258,7 @@ body {
 .image-container img {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 .text-container {
@@ -239,50 +270,57 @@ body {
     font-size: 28px;
     font-weight: 900;
     margin-bottom: 10px;
+    color: #ffffff;
 }
 
 .text-container h3 {
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 400;
     margin-bottom: 20px;
-    color: #444;
+    color: #ff2a85;
 }
 
 .text-container p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 30px;
-    color: #555;
+    color: #cccccc;
 }
 
 .btn-visit {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #e5e5e5;
-    color: #000;
+    padding: 12px 28px;
+    background-color: #ff2a85;
+    color: #ffffff !important;
     text-decoration: none;
     font-weight: bold;
     font-size: 12px;
     letter-spacing: 1px;
-    border-radius: 4px;
-    transition: background 0.3s ease;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 42, 133, 0.3);
 }
 
 .btn-visit:hover {
-    background-color: #d4d4d4;
+    background-color: #ff4797;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 42, 133, 0.5);
 }
 
 /* --- DISEÑO RESPONSIVE (MÓVILES Y TABLETS) --- */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .navbar {
         flex-direction: column;
-        padding: 15px;
-        gap: 15px;
-        position: static; 
+        padding: 20px;
+        gap: 20px;
+        position: relative; 
+        top: 0;
+        width: 100%;
+        border-radius: 0;
     }
 
     .logo h1 {
-        font-size: 16px; /* Ajuste para que el texto largo no rompa el diseño móvil */
+        font-size: 15px; 
         text-align: center;
     }
 
@@ -293,8 +331,7 @@ body {
     }
 
     .dropdown-content {
-        left: 50%;
-        transform: translateX(-50%);
+        top: 100%;
     }
     
     .about-container {
@@ -306,13 +343,5 @@ body {
         padding: 40px 20px;
         text-align: center; 
         gap: 30px;
-    }
-
-    .text-container h2 {
-        font-size: 24px;
-    }
-
-    .text-container h3 {
-        font-size: 20px;
     }
 }
