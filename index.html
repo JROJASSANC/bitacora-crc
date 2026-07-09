@@ -14,28 +14,33 @@
         </div>
         <ul class="nav-links">
             <li><a href="#tab1" class="dropbtn">SOBRE EL BLOG</a></li>
-            <li><a href="#tab2" class="dropbtn">SECCIÓN 2</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">TECHNOLOGY</a>
+                <div class="dropdown-content">
+                    <a href="#">Opción 1</a>
+                    <a href="#">Opción 2</a>
+                </div>
+            </li>
         </ul>
     </nav>
 
     <main class="tab-container">
         
-        <section id="tab1" class="tab-content active-tab">
-            <div class="info-blog-block">
+        <section id="tab1" class="content-section active-tab">
+            <div class="text-container">
                 <h2>Sobre el blog</h2>
                 <div class="underline"></div>
-                <p>¡Bienvenidos a nuestro espacio digital de investigación!</p>
-                <p>Esta bitácora académica ha sido desarrollada como portafolio virtual para el curso de <strong>Análisis de la Realidad Nacional y Ambiental</strong>, impartido en la Universidad Científica del Sur.</p>
+                <p>¡Bienvenidos a nuestro espacio digital de investigación! Esta bitácora académica ha sido desarrollada como portafolio virtual para el curso de <strong>Análisis de la Realidad Nacional y Ambiental</strong>, impartido en la Universidad Científica del Sur.</p>
                 
                 <h3>Nuestra Misión</h3>
-                <p>El propósito principal de este espacio es analizar y comprender la realidad peruana tanto en el ámbito político, socioeconómico y ambiental a lo largo de la historia hasta el presente. A través de nuestros trabajos semanales, buscamos reflexionar sobre la identidad del país y sus desafíos estructurales, proponiendo estrategias para su desarrollo sostenible.</p>
+                <p>El propósito principal de este espacio es analizar y comprender la realidad peruana tanto en el ámbito político, socioeconómico y ambiental a lo largo de la historia hasta el presente. A través de nuestros trabajos semanales, buscamos reflexionar sobre la identidad del país y sus desafíos estructurales.</p>
             </div>
 
-            <div class="docente-block">
+            <div class="text-container">
                 <h2>Conoce a nuestro docente</h2>
                 <div class="underline"></div>
                 <div class="docente-profile">
-                    <div class="docente-image">
+                    <div class="image-container">
                         <img src="imagen.jpg" alt="Juan Leandro Tito Melgar">
                     </div>
                     <div class="docente-info">
@@ -50,10 +55,13 @@
             </div>
         </section>
 
-        <section id="tab2" class="tab-content">
-            <h2>Sección 2</h2>
-            <p>Aquí irá el contenido de la segunda sección.</p>
+        <section id="tab2" class="content-section bg-light">
+            <div class="text-container">
+                <h2>Sección 2</h2>
+                <p>Aquí puedes agregar más contenido siguiendo la misma estructura.</p>
+            </div>
         </section>
+
     </main>
 
 </body>
