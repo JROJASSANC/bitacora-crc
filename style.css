@@ -63,24 +63,31 @@ body {
     position: absolute;
     top: 100%; /* ¡La solución! Al estar al 100%, se pega exactamente debajo del botón sin dejar huecos */
     left: -20px;
-    background-color: #333333; 
+    background-color: #161b22; 
     min-width: 250px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
+/* --- BARRA DE NAVEGACIÓN Y MENÚS --- */
+.logo h1, .nav-links a, .dropbtn {
+    color: #ffffff !important; 
+}
+
+/* Color para el texto dentro del menú desplegable */
 .dropdown-content a {
-    color: white;
+    color: #ffffff !important;
+    background-color: #161b22; /* Fondo del desplegable igual al de la barra */
     padding: 15px 20px;
     text-decoration: none;
     display: block;
     font-size: 13px;
     letter-spacing: 2px;
-    transition: background 0.3s ease;
 }
 
+/* Efecto al pasar el mouse por las opciones del desplegable */
 .dropdown-content a:hover {
-    background-color: #555555; 
+    background-color: #2b333e; /* Un tono un poco más claro para el hover */
 }
 
 /* Muestra el menú al pasar el mouse (hover) O al hacer clic (focus-within) */
