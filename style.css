@@ -88,25 +88,30 @@ body {
 }
 
 /* =========================================
-   NUEVA SECCIÓN: SOBRE EL BLOG 
+   SECCIÓN: SOBRE EL BLOG (AJUSTADA AL ANCHO)
 ========================================= */
 .about-section {
-    padding: 140px 20px 60px 20px; /* Espacio extra arriba por la barra fija */
-    min-height: 100vh;
+    padding: 140px 5% 60px 5%; /* Usa porcentajes para adaptarse mejor a cualquier pantalla */
+    min-height: 80vh;
+    display: flex;
+    align-items: flex-start;
 }
 
 .about-container {
-    max-width: 900px;
+    width: 100%; /* Fuerza a usar todo el espacio disponible */
+    max-width: 1600px; /* Permite que se expanda mucho más a los lados */
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    gap: 40px; /* Separación entre los dos recuadros */
+    flex-direction: row; /* Uno al lado del otro */
+    gap: 40px;
+    align-items: stretch; 
 }
 
 /* Estilo de los recuadros */
 .about-box {
-    background-color: #f9f9f9; /* Fondo gris muy claro para el recuadro */
-    padding: 40px;
+    flex: 1; /* Hace que ambos recuadros midan exactamente el 50% del ancho */
+    background-color: #f9f9f9; 
+    padding: 50px;
     border-radius: 8px;
     border: 1px solid #eaeaea;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -119,7 +124,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* La pequeña línea debajo del título (en gris oscuro para mantener tus colores) */
 .divider {
     width: 60px;
     height: 4px;
@@ -146,17 +150,19 @@ body {
 /* Estructura del contenido del Docente */
 .docente-content {
     display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
     margin-top: 10px;
 }
 
 .docente-img {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ddd; /* Borde simple para la foto */
+    border: 3px solid #ddd; 
 }
 
 .docente-text h3 {
@@ -169,13 +175,14 @@ body {
     font-size: 15px;
     font-weight: bold;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .docente-text ul {
     list-style-type: disc;
     margin-left: 20px;
     color: #444;
+    text-align: left; 
 }
 
 .docente-text ul li {
@@ -184,16 +191,17 @@ body {
 }
 
 /* =========================================
-   SECCIONES DE CONTENIDO ANTIGUAS (FOTO 3) 
+   SECCIONES DE CONTENIDO ANTIGUAS 
 ========================================= */
 .content-section {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 80vh; 
-    padding: 60px;
+    padding: 60px 5%; /* Ajustado para que combine con el ancho nuevo */
     gap: 50px;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -254,7 +262,7 @@ body {
 }
 
 /* --- DISEÑO RESPONSIVE (MÓVILES Y TABLETS) --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .navbar {
         flex-direction: column;
         padding: 15px;
@@ -272,24 +280,17 @@ body {
         left: 50%;
         transform: translateX(-50%);
     }
+    
+    /* Vuelve a apilar los recuadros en pantallas pequeñas para que no se aplasten */
+    .about-container {
+        flex-direction: column;
+    }
 
-    /* Responsive para las secciones de contenido */
     .content-section {
         flex-direction: column;
         padding: 40px 20px;
         text-align: center; 
         gap: 30px;
-    }
-
-    /* Responsive para la nueva sección del docente */
-    .docente-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .docente-text ul {
-        text-align: left; /* Mantiene la lista legible en móviles */
     }
 
     .text-container h2 {
