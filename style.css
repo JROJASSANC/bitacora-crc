@@ -42,11 +42,12 @@ body {
 
 /* --- ESTILOS DEL LOGO --- */
 .logo h1 {
-    font-size: 18px;
-    color: #ff2a85; 
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif; /* Nueva tipografía importada */
+    font-size: 17px; 
+    color: #e83283; /* Tono rosa ajustado para igualar tu imagen */
+    font-weight: 800; /* Extra negrita para ese aspecto grueso */
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: -0.5px; /* Letras un poquito más juntas como en el ejemplo */
 }
 
 /* --- ENLACES Y MENÚ --- */
@@ -218,7 +219,7 @@ body {
 }
 
 /* =========================================
-   SECCIONES DE INFOGRAFÍAS (NUEVO DISEÑO)
+   SECCIONES DE INFOGRAFÍAS
 ========================================= */
 .content-section {
     display: flex;
@@ -237,20 +238,17 @@ body {
     border-radius: 16px;
 }
 
-/* Contenedor de la imagen ahora ocupa mucho más espacio */
 .image-container {
-    flex: 2.5; /* Ampliado para destacar la infografía */
+    flex: 2.5; 
     display: flex;
     justify-content: center;
 }
 
-/* Contenedor del texto ahora es más estrecho */
 .text-container {
     flex: 1; 
     padding: 20px 0;
 }
 
-/* Efecto al pasar el cursor sobre la imagen */
 .zoomable-img {
     width: 100%;
     max-height: 500px;
@@ -263,7 +261,7 @@ body {
 
 .zoomable-img:hover {
     transform: scale(1.02);
-    box-shadow: 0 15px 35px rgba(255, 42, 133, 0.3); /* Resplandor fucsia */
+    box-shadow: 0 15px 35px rgba(255, 42, 133, 0.3);
 }
 
 .text-container h2 {
@@ -282,7 +280,7 @@ body {
 }
 
 /* =========================================
-   MODAL (VENTANA EMERGENTE PARA IMÁGENES)
+   MODAL (VENTANA EMERGENTE)
 ========================================= */
 .modal {
     display: none; 
@@ -297,7 +295,6 @@ body {
     -webkit-backdrop-filter: blur(8px);
 }
 
-/* El pseudo-elemento :target detecta cuando se hace clic en el enlace de la imagen */
 .modal:target {
     display: flex;
     justify-content: center;
