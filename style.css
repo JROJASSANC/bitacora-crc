@@ -42,12 +42,12 @@ body {
 
 /* --- ESTILOS DEL LOGO --- */
 .logo h1 {
-    font-family: 'Montserrat', sans-serif; /* Nueva tipografía importada */
+    font-family: 'Montserrat', sans-serif; 
     font-size: 17px; 
-    color: #e83283; /* Tono rosa ajustado para igualar tu imagen */
-    font-weight: 800; /* Extra negrita para ese aspecto grueso */
+    color: #e83283; 
+    font-weight: 800; 
     margin: 0;
-    letter-spacing: -0.5px; /* Letras un poquito más juntas como en el ejemplo */
+    letter-spacing: -0.5px; 
 }
 
 /* --- ENLACES Y MENÚ --- */
@@ -110,7 +110,7 @@ body {
 }
 
 /* =========================================
-   SECCIÓN: SOBRE EL BLOG 
+   SECCIÓN: SOBRE EL BLOG / INTEGRANTES / DOCENTE
 ========================================= */
 .about-section {
     padding: 140px 5% 60px 5%; 
@@ -175,7 +175,50 @@ body {
     color: #ff2a85;
 }
 
-/* Estructura del contenido del Docente */
+/* --- CUADRÍCULA 2x2 DE INTEGRANTES --- */
+.team-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Exactamente 2 columnas */
+    gap: 30px 15px; /* Espacio entre filas y columnas */
+    margin-top: 15px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.team-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #ff2a85;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.role {
+    color: #ff2a85 !important;
+    font-weight: bold;
+    font-size: 12px !important;
+    margin-bottom: 2px !important;
+}
+
+.ocupation {
+    color: #cccccc !important;
+    font-size: 11px !important;
+    margin-bottom: 0 !important;
+}
+
+/* --- ESTRUCTURA DEL DOCENTE --- */
 .docente-content {
     display: flex;
     flex-direction: column;
