@@ -3,93 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajo - Diseño Web</title>
+    <title>Mi Blog Académico</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Puedes añadir tu script de iconos aquí, por ejemplo FontAwesome -->
+    <script src="https://kit.fontawesome.com/tu-codigo-de-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+    <!-- BARRA DE NAVEGACIÓN (Fija, color azul oscuro) -->
     <nav class="navbar">
         <div class="logo">
-            <h1>MI WEB</h1> </div>
+            <h1>MI BLOG</h1>
+        </div>
         <ul class="nav-links">
-            <li><a href="#inicio">SOBRE EL BLOG</a></li>
-            
+            <!-- Botón 1: PESTAÑA ACTIVA POR DEFECTO -->
             <li class="dropdown">
-                <a href="#" class="dropbtn">TECHNOLOGY</a>
-                <div class="dropdown-content">
-                    <a href="#seccion1">Technology at Pixar</a>
-                    <a href="#seccion2">RenderMan</a>
-                    <a href="#seccion3">OpenUSD</a>
-                    <a href="#seccion4">Software R&D</a>
-                    <a href="#seccion5">Technology Libraries</a>
-                </div>
+                <!-- Al hacer clic en este enlace, el JS (si tuvieras) activaría tab1. 
+                     Pero para que cargue visible, lo haremos en el CSS. -->
+                <a href="#tab1" class="dropbtn active-tab-link">
+                    <i class="fas fa-info-circle"></i> SOBRE EL BLOG
+                </a>
             </li>
             
-            <li><a href="#careers">CAREERS</a></li>
-            <li><a href="#more">MORE</a></li>
+            <!-- Botón 2 -->
+            <li class="dropdown">
+                <a href="#tab2" class="dropbtn">
+                    <i class="fas fa-book-open"></i> SECCIÓN 2
+                </a>
+            </li>
+            
+            <!-- Botón 3 -->
+            <li><a href="#tab3"><i class="fas fa-users"></i> SECCIÓN 3</a></li>
+            
+            <!-- Botón 4 (Ejemplo de enlace directo) -->
+            <li><a href="https://github.com/tu-usuario" target="_blank"><i class="fab fa-github"></i> GITHUB</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section id="seccion1" class="content-section">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/500x350/111111/FFFFFF?text=Imagen+1" alt="Imagen 1">
+    <!-- CONTENIDO PRINCIPAL (Contenedor de pestañas) -->
+    <main class="tab-container">
+
+        <!-- ====================================================
+             CONTENIDO DE LA PESTAÑA 1: "SOBRE EL BLOG"
+             Este bloque debe estar visible al cargar la página.
+             ==================================================== -->
+        <section id="tab1" class="tab-content active-tab">
+            
+            <!-- BLOQUE 1: INFORMACIÓN DEL BLOG (Como en la imagen) -->
+            <div class="info-blog-block">
+                <h2>Sobre el blog</h2>
+                <div class="underline"></div>
+                <p>¡Bienvenidos a nuestro espacio digital de investigación!</p>
+                <p>Esta bitácora académica ha sido desarrollada como portafolio virtual para el curso de <strong>Análisis de la Realidad Nacional y Ambiental</strong>, impartido en la Universidad Científica del Sur.</p>
+                
+                <h3>Nuestra Misión</h3>
+                <p>El propósito principal de este espacio es analizar y comprender la realidad peruana tanto en el ámbito político, socioeconómico y ambiental a lo largo de la historia hasta el presente. A través de nuestros trabajos semanales, buscamos reflexionar sobre la identidad del país y sus desafíos estructurales, proponiendo estrategias para su desarrollo sostenible.</p>
+                <p>Como futuros profesionales de la Universidad Científica del Sur, hacemos nuestro el lema institucional: *"Mejoras tú, mejora el mundo"*, comprometiéndonos a aplicar una perspectiva crítica y ciudadana frente a los problemas que afectan a nuestro entorno.</p>
             </div>
-            <div class="text-container">
-                <h2>TECHNOLOGY AT PIXAR</h2>
-                <h3>El futuro de la animación</h3>
-                <p>Aquí va tu texto descriptivo. Esta sección explica el contenido de la primera opción del menú desplegable. Al hacer clic arriba, la página bajará automáticamente hasta aquí.</p>
-                <a href="#" class="btn-visit">VISIT PAGE</a>
+
+            <!-- BLOQUE 2: CONOCE A NUESTRO DOCENTE (Como en la imagen) -->
+            <div class="docente-block">
+                <h2>Conoce a nuestro docente</h2>
+                <div class="underline"></div>
+                <div class="docente-profile">
+                    <div class="docente-image">
+                        <!-- ¡ASEGÚRATE DE TENER ESTA IMAGEN EN TU REPOSITORIO! -->
+                        <img src="imagen.jpg" alt="Juan Leandro Tito Melgar">
+                    </div>
+                    <div class="docente-info">
+                        <h3>Juan Leandro Tito Melgar</h3>
+                        <p class="docente-title"><strong>Magíster en Historia e Investigador</strong></p>
+                        <ul>
+                            <li>Magíster en Historia por la Universidad Nacional Mayor de San Marcos. Historiador por la misma universidad.</li>
+                            <li>Egresado de la carrera de Educación en la Universidad Antonio Ruiz de Montoya.</li>
+                            <li>Docente, investigador y archivero con experiencia en el sector público y privado.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
         </section>
 
-        <section id="seccion2" class="content-section bg-light">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/500x350/333333/FFFFFF?text=Imagen+2" alt="Imagen 2">
-            </div>
-            <div class="text-container">
-                <h2>RENDERMAN</h2>
-                <h3>The World's Most Versatile Renderer</h3>
-                <p>RenderMan® is Pixar's Academy Award®-winning rendering technology, excelling at producing stunning imagery for VFX and feature film animation.</p>
-                <a href="#" class="btn-visit">VISIT RENDERMAN.COM</a>
-            </div>
+        <!-- ====================================================
+             CONTENIDO DE LA PESTAÑA 2: "SECCIÓN 2" (Vacío por ahora)
+             ==================================================== -->
+        <section id="tab2" class="tab-content">
+            <h2>Contenido de la Sección 2</h2>
+            <p>Aquí podrás añadir tus artículos, entradas del blog o portafolios.</p>
         </section>
 
-        <section id="seccion3" class="content-section">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/500x350/555555/FFFFFF?text=Imagen+3" alt="Imagen 3">
-            </div>
-            <div class="text-container">
-                <h2>OPEN USD</h2>
-                <h3>Descripción de la tercera sección</h3>
-                <p>Aquí puedes agregar la información correspondiente a la tercera opción del menú. El diseño alterna para mantenerse visualmente atractivo.</p>
-                <a href="#" class="btn-visit">LEARN MORE</a>
-            </div>
+        <!-- ====================================================
+             CONTENIDO DE LA PESTAÑA 3: "SECCIÓN 3" (Vacío por ahora)
+             ==================================================== -->
+        <section id="tab3" class="tab-content">
+            <h2>Contenido de la Sección 3</h2>
+            <p>Información adicional de tu proyecto.</p>
         </section>
 
-        <section id="seccion4" class="content-section bg-light">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/500x350/777777/FFFFFF?text=Imagen+4" alt="Imagen 4">
-            </div>
-            <div class="text-container">
-                <h2>SOFTWARE R&D</h2>
-                <h3>Investigación y Desarrollo</h3>
-                <p>Más texto de ejemplo para la cuarta sección. Nota cómo cada sección tiene su propio ID que coincide con los enlaces del menú superior.</p>
-                <a href="#" class="btn-visit">DISCOVER MORE</a>
-            </div>
-        </section>
-
-        <section id="seccion5" class="content-section">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/500x350/999999/FFFFFF?text=Imagen+5" alt="Imagen 5">
-            </div>
-            <div class="text-container">
-                <h2>TECHNOLOGY LIBRARIES</h2>
-                <h3>Recursos de código abierto</h3>
-                <p>Esta es la última sección de tu trabajo. Si necesitas añadir una sexta, solo debes copiar y pegar esta estructura `<section>` y cambiar su ID.</p>
-                <a href="#" class="btn-visit">VIEW GITHUB</a>
-            </div>
-        </section>
     </main>
 
 </body>
