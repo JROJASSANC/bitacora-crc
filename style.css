@@ -42,12 +42,12 @@ body {
 
 /* --- ESTILOS DEL LOGO --- */
 .logo h1 {
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif; /* Nueva tipografía importada */
     font-size: 17px; 
-    color: #e83283; 
-    font-weight: 800; 
+    color: #e83283; /* Tono rosa ajustado para igualar tu imagen */
+    font-weight: 800; /* Extra negrita para ese aspecto grueso */
     margin: 0;
-    letter-spacing: -0.5px; 
+    letter-spacing: -0.5px; /* Letras un poquito más juntas como en el ejemplo */
 }
 
 /* --- ENLACES Y MENÚ --- */
@@ -377,6 +377,54 @@ body {
 @keyframes zoomIn {
     from {transform: scale(0.9); opacity: 0;}
     to {transform: scale(1); opacity: 1;}
+}
+
+/* =========================================
+   SECCIÓN: REFERENCIAS BIBLIOGRÁFICAS
+========================================= */
+.ref-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ref-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #ff2a85; /* Línea fucsia a la izquierda */
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.ref-card:hover {
+    transform: translateX(5px);
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.ref-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.ref-text p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.ref-text a {
+    color: #ff2a85;
+    text-decoration: none;
+    word-break: break-all; /* Para que los enlaces largos no rompan el contenedor */
+}
+
+.ref-text a:hover {
+    text-decoration: underline;
 }
 
 /* --- DISEÑO RESPONSIVE (MÓVILES Y TABLETS) --- */
